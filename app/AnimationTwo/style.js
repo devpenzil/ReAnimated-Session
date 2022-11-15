@@ -3,8 +3,6 @@ import {StyleSheet} from 'react-native';
 export const style = StyleSheet.create({
   container: {
     padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
     height: '100%',
   },
   debit: {

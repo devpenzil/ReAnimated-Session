@@ -10,6 +10,7 @@ import React, {useState} from 'react';
 import {style} from './style';
 import PlusIcon from '../../assets/PlusIcon';
 import Trash from '../../assets/Trash';
+import Animated, {SlideInLeft} from 'react-native-reanimated';
 
 const AnimationOne = () => {
   const [todos, setTodos] = useState([]);
@@ -41,7 +42,7 @@ const AnimationOne = () => {
           renderItem={({item, index}) => {
             return (
               <>
-                <View style={style.card}>
+                <Animated.View entering={SlideInLeft} style={style.card}>
                   <Text>{item.todoitem}</Text>
                   <TouchableOpacity
                     style={style.plusicon}
@@ -50,7 +51,7 @@ const AnimationOne = () => {
                     }}>
                     <Trash />
                   </TouchableOpacity>
-                </View>
+                </Animated.View>
               </>
             );
           }}
